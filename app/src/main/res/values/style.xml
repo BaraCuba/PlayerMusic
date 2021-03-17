@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.Bridge">
+
+    <item name="colorPrimary">@color/peach</item>
+    <item name="colorPrimaryDark">@color/peach</item>
+    <item name="android:windowBackground">@color/blue</item>
+    <item name="android:textColorPrimary">@color/white</item>
+
+
+</style>
+
+</resources>

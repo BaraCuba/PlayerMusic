@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/mobile_navigation"
+  app:startDestination="@+id/navigation_home">
+
+  <fragment
+    android:id="@+id/navigation_home"
+    android:name="com.bignerdranch.android.mymusic.ui.home.HomeFragment"
+    android:label="@string/home"
+    tools:layout="@layout/fragment_home">
+    <action
+      android:id="@+id/action_navigation_home_to_tapeFragment"
+      app:destination="@id/navigation_tape" />
+    <action
+        android:id="@+id/action_navigation_home_to_myMusicFragment"
+        app:destination="@id/navigation_my_music" />
+    <action
+        android:id="@+id/action_navigation_home_to_navigation_search"
+        app:destination="@id/navigation_search" />
+  </fragment>
+
+  <fragment
+    android:id="@+id/navigation_tape"
+    android:name="com.bignerdranch.android.mymusic.ui.tape.TapeFragment"
+    android:label="@string/tape"
+    tools:layout="@layout/fragment_tape">
+    <action
+      android:id="@+id/action_tapeFragment_to_navigation_home"
+      app:destination="@id/navigation_home" />
+    <action
+        android:id="@+id/action_navigation_tape_to_myMusicFragment"
+        app:destination="@id/navigation_my_music" />
+    <action
+        android:id="@+id/action_navigation_tape_to_navigation_search"
+        app:destination="@id/navigation_search" />
+  </fragment>
+  <fragment
+    android:id="@+id/navigation_my_music"
+    android:name="com.bignerdranch.android.mymusic.ui.my_music.MyMusicFragment"
+    android:label="@string/my_music"
+    tools:layout="@layout/fragment_my_music">
+    <action
+      android:id="@+id/action_myMusicFragment_to_navigation_home"
+      app:destination="@id/navigation_home" />
+    <action
+      android:id="@+id/action_myMusicFragment_to_navigation_tape"
+      app:destination="@id/navigation_tape" />
+    <action
+      android:id="@+id/action_navigation_my_music_to_navigation_search"
+      app:destination="@id/navigation_search" />
+  </fragment>
+  <fragment
+    android:id="@+id/navigation_search"
+    android:name="com.bignerdranch.android.mymusic.ui.search.SearchFragment"
+    android:label="@string/search"
+    tools:layout="@layout/fragment_search">
+    <action
+      android:id="@+id/action_navigation_search_to_navigation_home"
+      app:destination="@id/navigation_home" />
+    <action
+      android:id="@+id/action_navigation_search_to_navigation_my_music"
+      app:destination="@id/navigation_my_music" />
+    <action
+      android:id="@+id/action_navigation_search_to_navigation_tape"
+      app:destination="@id/navigation_tape" />
+  </fragment>
+</navigation>
